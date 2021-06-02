@@ -1,0 +1,27 @@
+/* Background color 1(Dark Purple): #1F1F3D
+   Background color 2(Medium Purple): #A9AAD2
+   Background color 3(Light Pruple): #EAEAF4
+   Header Text: Open Sans, Bold
+   Body and Label Text: Open Sans, Light */
+
+* {
+  font-family: "Open Sans";
+}
+
+body, html {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+button {
+
+}
+
+/* Section 2 */
