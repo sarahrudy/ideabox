@@ -5,7 +5,8 @@
    Body and Label Text: Open Sans, Light */
 
 * {
-  font-family: "Open Sans";
+  font-family: "Quicksand", sans-serif;
+  border: 2px solid red;
 }
 
 body, html {
