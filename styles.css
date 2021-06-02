@@ -9,12 +9,20 @@
   border: 2px solid red;
 }
 
-body, html {
-
+.sidebar {
+  background: #1F1F3D;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 25%;
 }
 
-h5 {
+/* body, html {
 
+} */
+
+h5 {
+  color: white;
 }
 
 h6 {
@@ -26,3 +34,18 @@ button {
 }
 
 /* Section 2 */
+
+.topbox {
+  background: #A9AAD2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 75%;
+}
+
+/* Section 3 */
+
+.bottombox {
+  background: #EAEAF4;
+}
