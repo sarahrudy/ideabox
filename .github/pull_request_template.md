@@ -1,10 +1,16 @@
-What is this code? 
+PR Template:
+Is this a fix or a feature?
+[ ] Bug fix
+[ ] Feature
+[ ] Refactor
+
+Describe the feature - fix - refactor:
 
 
-What does it accomplish?
+How was this tested?
+[ ] open index.html
+[ ] localhost 
+[ ] terminal
 
 
-What do my team members need to know about?
-
-
-Code quality -- any functions that are broken into smaller functions? Is everything there for a purpose? 
+Additional comments:
