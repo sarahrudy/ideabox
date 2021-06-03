@@ -11,4 +11,8 @@ class Idea {
     var stringIdea = JSON.stringfy(idea)
     localStorage.setItem(`savedIdea${this.id}`, stringIdea)
   }
+
+  function deleteFromStorage(){
+  localStorage.removeItem(`savedIdea${this.id}`)
+}
 }
