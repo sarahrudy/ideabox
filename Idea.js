@@ -5,3 +5,10 @@ class Idea {
     this.star = star;
     this.id = id
   }
+
+  function saveToStorage(){
+    var idea = {title: this.title, body:this.body, star: this.star, id: this.id}
+    var stringIdea = JSON.stringfy(idea)
+    localStorage.setItem(`savedIdea${this.id}`, stringIdea)
+  }
+}
