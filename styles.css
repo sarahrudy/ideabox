@@ -10,19 +10,76 @@
 }
 
 body, html {
-
+  background-color: #EAEAF4;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  background-attachment: fixed;
 }
 
-h5 {
-
+aside {
+  background-color: #1F1F3D;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 25%;
+  color: white;
+  font-size: 5px;
+  flex-wrap: wrap-reverse;
 }
 
-h6 {
-
+.show-starred-btn {
+  background-color: #5356A4;
+  color: #E9E9F3;
+  font-weight: bold;
+  /* font-size: 5px; */
 }
 
-button {
-
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 75%;
+  height: 100%;
+  flex: 1
 }
 
-/* Section 2 */
+form {
+  background-color: #A9AAD2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  /* width: 100% */
+}
+
+section {
+  background-color: #EAEAF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  /* height: 40%;
+  width: 100% */
+}
+
+input {
+  width: 50%;
+}
+
+.save-btn {
+/* background-color:  */
+  width: 50%;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap-reverse;
+}
