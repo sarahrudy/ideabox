@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>IdeaBox</title>
   </head>
   <body>
-    <section class="section-1">
-      <h5>IdeaBox</h5>
-      <h6>Filter Starred Ideas</h6>
-      <button type="button" name="name">Show Starred Ideas</button>
-    </section>
-    <section class="section-2">
-      <h5>Title</h5>
-      <form class="" action="index.html" method="post">
+    <aside>
+      <h1>IdeaBox</h1>
+      <hr size=1>
+      <h2>Filter Starred Ideas</h2>
+      <button class="show-starred-btn">Show Starred Ideas</button>
+      <hr size=1>
+    </aside>
+    <main>
+      <form>
+        <div>
+          <label>Title</label><br />
+          <input type="text">
+        </div>
+        <div>
+          <label>Body</label><br />
+          <input type="text">
+        </div>
+        <button class="save-btn">Save</button>
+        <div class="search-ideas-bar">
+        <button class="search-ideas" src="assets/search.svg"></button>
+          <input type="text" placeholder="Search ideas">
+        </div>
       </form>
-      <h5>Body</h5>
-      <form class="" action="index.html" method="post">
-      </form>
-      <button type="button" name="button">Save</button><br />
-      <input type="text" placeholder="Search ideas" name="" value="">
-      <button type="button" name="button" src="assets/search.svg"></button>
-    </section>
-    <section class="section-3">
-      <article class="card">
-        <button type="button" name="button" src="assets/star-active.svg"></button>
-        <button type="button" name="button" src="assets/delete.svg"></button>
-        <h3>Idea title</h3>
-        <p>Idea body...</p>
-        <button type="button" name="button" src="assets/comment.svg">Comment</button>
-      </article>
-    </section>
+      <section>
+        <!-- cards will append here -->
+        <article class="card">
+          <div>
+            <input type="image" src="assets/star.svg" class="emptyStar" id="emptyStarID" />
+            <!-- <input type="image" src="assets/star-active.svg" class="saveStar" id="saveStarID" /> -->
+            <input type="image" src="assets/delete.svg" class="deleteCard" id="deleteCardID" />
+          </div>
+          <h3>Idea title</h3>
+          <p>Idea body text goes here...</p>
+          <button class="comment" src="assets/comment.svg">Comment</button>
+        </article>
+      </section>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
