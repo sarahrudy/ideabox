@@ -17,7 +17,6 @@ body, html {
   font-weight: bold;
   height: 100%;
   width: 100%;
-  overflow: scroll;
   margin: 0;
 }
 
@@ -54,6 +53,7 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding-right: .5em;
   padding-left: .5em;
@@ -78,13 +78,12 @@ form {
   background-color: #A9AAD2;
   font-weight: lighter;
   font-size: .75em;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   height: 40%;
   width: 100%;
+}
+
+label {
+
 }
 
 .title-box {
@@ -137,7 +136,7 @@ article {
   display:flex;
   flex-direction: row;
   /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* align-items: stretch; */
   height: 2em;
 }
