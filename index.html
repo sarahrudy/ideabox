@@ -10,7 +10,7 @@
   <body>
     <aside>
       <h1>IdeaBox</h1>
-      <hr size=1>
+      <hr size="1">
       <h2>Filter Starred Ideas</h2>
       <button class="show-starred-btn">Show Starred Ideas</button>
       <hr size=1>
@@ -19,25 +19,25 @@
       <form>
         <div>
           <label>Title</label><br />
-          <input type="text">
-        </div>
+          <input type="text" class="title-box">
+              </div>
         <div>
           <label>Body</label><br />
-          <input type="text">
+          <input type="text" class="body-box">
         </div>
         <button class="save-btn">Save</button>
         <div class="search-ideas-bar">
         <button class="search-ideas" src="assets/search.svg"></button>
-          <input type="text" placeholder="Search ideas">
+          <input class=type="text" placeholder="Search ideas">
         </div>
       </form>
       <section>
         <!-- cards will append here -->
         <article class="card">
-          <div>
-            <input type="image" src="assets/star.svg" class="emptyStar" id="emptyStarID" />
+          <div class="star-delete">
+            <input type="image" src="assets/star.svg" class="empty-star" id="emptyStarID" />
             <!-- <input type="image" src="assets/star-active.svg" class="saveStar" id="saveStarID" /> -->
-            <input type="image" src="assets/delete.svg" class="deleteCard" id="deleteCardID" />
+            <input type="image" src="assets/delete.svg" class="delete-card" id="deleteCardID" />
           </div>
           <h3>Idea title</h3>
           <p>Idea body text goes here...</p>
