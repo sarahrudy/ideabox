@@ -10,10 +10,11 @@
   <body>
     <aside>
       <h1>IdeaBox</h1>
-      <hr size=1>
+      <!-- <hr size=1> -->
       <h2>Filter Starred Ideas</h2>
-      <button class="show-starred-btn">Show Starred Ideas</button>
-      <hr size=1>
+      <button class="show-starred-btn">Show Starred Ideas
+      </button>
+      <!-- <hr size=1> -->
     </aside>
     <main>
       <form>
@@ -25,26 +26,30 @@
           <label>Body</label><br />
           <input type="text" class="body-box">
         </div>
-        <button class="save-btn">Save</button>
+          <button class="save-btn">Save</button>
         <div class="search-ideas-bar">
           <input type="image" src="assets/search.svg" class="search-icon" id="searchIconId" alt=""/>
           <input type="text" placeholder="Search ideas">
         </div>
       </form>
-      <section>
+      <section class="card-holder">
         <!-- cards will append here -->
         <article class="card">
           <div class="star-delete">
             <input type="image" src="assets/star.svg" class="empty-star" id="emptyStarId" alt=""/>
-            <!-- <input type="image" src="assets/star-active.svg" class="saveStar" id="saveStarID" alt="" /> -->
+            <!-- <input type="image" src="assets/star-active.svg" class="save-star" id="saveStarID" alt="" /> -->
             <input type="image" src="assets/delete.svg" class="delete-card" id="deleteCardId" alt=""/>
           </div>
           <h3>Idea title</h3>
           <p>Idea body text goes here...</p>
-          <button class="comment" src="assets/comment.svg" alt="">Comment</button>
+          <div class="cross-icon-comment">
+            <input type="image" src="assets/comment.svg" class="comment" id="commentId" alt=""/>
+          <button class="comment">Comment</button>
+        </div>
         </article>
       </section>
     </main>
-    <script type="text/javascript" src="main.js" alt=""></script>
+    <script type="text/javascript" src="main.js" alt="">
+    </script>
   </body>
 </html>
