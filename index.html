@@ -4,47 +4,82 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.comcss2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <title>IdeaBox</title>
   </head>
   <body>
     <aside>
-      <h1>IdeaBox</h1>
-      <hr size=1>
-      <h2>Filter Starred Ideas</h2>
-      <button class="show-starred-btn">Show Starred Ideas</button>
-      <hr size=1>
+      <div class="aside-header">
+          <h1>IdeaBox</h1>
+      </div>
+      <div class="aside-body">
+        <h2>Filter Starred Ideas</h2>
+        <button class="show-starred-btn">Show Starred Ideas
+        </button>
+      </div>
     </aside>
     <main>
       <form>
         <div>
           <label>Title</label><br />
-          <input type="text">
+          <input type="text" class="title-box">
         </div>
         <div>
           <label>Body</label><br />
-          <input type="text">
+          <input type="text" class="body-box">
         </div>
-        <button class="save-btn">Save</button>
+          <button class="save-btn">Save</button>
         <div class="search-ideas-bar">
-        <button class="search-ideas" src="assets/search.svg"></button>
+          <input type="image" src="assets/search.svg" class="search-icon" id="searchIconId" alt=""/>
           <input type="text" placeholder="Search ideas">
         </div>
       </form>
-      <section>
-        <!-- cards will append here -->
+      <section class="card-holder">
         <article class="card">
-          <div>
-            <input type="image" src="assets/star.svg" class="emptyStar" id="emptyStarID" />
-            <!-- <input type="image" src="assets/star-active.svg" class="saveStar" id="saveStarID" /> -->
-            <input type="image" src="assets/delete.svg" class="deleteCard" id="deleteCardID" />
+          <div class="star-delete">
+            <input type="image" src="assets/star.svg" class="empty-star" id="emptyStarId" alt=""/>
+            <input type="image" src="assets/star-active.svg" class="save-star hidden" id="saveStarID" alt="" />
+            <input type="image" src="assets/delete.svg" class="delete-card" id="deleteCardId" alt=""/>
           </div>
-          <h3>Idea title</h3>
-          <p>Idea body text goes here...</p>
-          <button class="comment" src="assets/comment.svg">Comment</button>
+            <div class="idea-text-container">
+              <h3>Idea title</h3>
+              <p>Idea body text goes here - here is some more text to see sizing - even more </p>
+            </div>
+          <button class="cross-icon-comment">
+            <img src="assets/comment.svg" alt="">Comment
+          </button>
+        </article>
+        <article class="card">
+          <div class="star-delete">
+            <input type="image" src="assets/star.svg" class="empty-star" id="emptyStarId" alt=""/>
+            <input type="image" src="assets/star-active.svg" class="save-star hidden" id="saveStarId" alt="" />
+            <input type="image" src="assets/delete.svg" class="delete-card" id="deleteCardId" alt=""/>
+          </div>
+            <div class="idea-text-container">
+              <h3>Idea title</h3>
+              <p>Idea body text goes here - here is some more text to see sizing - even more </p>
+            </div>
+          <button class="cross-icon-comment">
+            <img src="assets/comment.svg" alt="">Comment
+          </button>
+        </article>
+        <article class="card">
+          <div class="star-delete">
+            <input type="image" src="assets/star.svg" class="empty-star" id="emptyStarId" alt=""/>
+            <input type="image" src="assets/star-active.svg" class="save-star hidden" id="saveStarID" alt="" />
+            <input type="image" src="assets/delete.svg" class="delete-card" id="deleteCardId" alt=""/>
+          </div>
+            <div class="idea-text-container">
+              <h3>Idea title</h3>
+              <p>Idea body text goes here - here is some more text to see sizing - even more </p>
+            </div>
+          <button class="cross-icon-comment">
+            <img src="assets/comment.svg" alt="">Comment
+          </button>
         </article>
       </section>
     </main>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main.js" alt="">
+    </script>
   </body>
 </html>
