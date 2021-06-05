@@ -133,18 +133,17 @@ label {
 .search-icon {
   background: #1F1F3D;
   color: #EAEAF4;
-  border-radius: .25em;
   font-size: 1em;
-  height: auto;
-  width: 35px;
+  height: 2em;
+  width: 10%;
 }
 
 .search-ideas-bar {
   display: flex;
   flex-direction: row;
-  height: 2em;
+  height: 2.5em;
   border: 1px solid #5356A4;
-  width: 60%;
+  width: 50%;
   margin-left: 25%;
 }
 
@@ -157,10 +156,6 @@ section {
   align-items: center;
   /* height: 40%;
   width: 100% */
-}
-
-input {
-  width: 50%;
 }
 
 article {
@@ -193,7 +188,8 @@ article {
   color: white;
   font-weight: bold;
   border: none;
-  height: 2em;
+  padding: 0;
+  height: 2.5em;
 
 }
 
@@ -224,3 +220,7 @@ p {
   font-weight: 400;
   margin: 15px;
   }
+
+.hidden {
+  display: none!important
+}
