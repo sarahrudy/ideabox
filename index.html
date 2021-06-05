@@ -9,12 +9,14 @@
   </head>
   <body>
     <aside>
-      <h1>IdeaBox</h1>
-      <!-- <hr size=1> -->
-      <h2>Filter Starred Ideas</h2>
-      <button class="show-starred-btn">Show Starred Ideas
-      </button>
-      <!-- <hr size=1> -->
+      <div class="aside-header">
+          <h1>IdeaBox</h1>
+      </div>
+      <div class="aside-body">
+        <h2>Filter Starred Ideas</h2>
+        <button class="show-starred-btn">Show Starred Ideas
+        </button>
+      </div>
     </aside>
     <main>
       <form>
@@ -44,10 +46,13 @@
               <h3>Idea title</h3>
               <p>Idea body text goes here - here is some more text to see sizing - even more </p>
             </div>
-          <div class="cross-icon-comment">
-            <input type="image" src="assets/comment.svg" class="comment" id="commentId" alt=""/>
-          <button class="comment">Comment</button>
-        </div>
+          <!-- <div class="cross-icon-comment"> -->
+            <!-- <input type="image" src="assets/comment.svg" class="comment" id="commentId" alt=""/> -->
+          <button class="cross-icon-comment">
+            <img src="assets/comment.svg" alt="cross icon">
+            Comment
+          </button>
+        <!-- </div> -->
         </article>
       </section>
     </main>
