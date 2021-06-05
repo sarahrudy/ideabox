@@ -14,7 +14,6 @@ body, html {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  font-weight: bold;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -38,8 +37,8 @@ aside {
 }
 
 .aside-body {
-  border-top: 1px solid #A9AAD2;
-  border-bottom: 1px solid #A9AAD2;
+  border-top: .1px solid #A9AAD2;
+  border-bottom: .1px solid #A9AAD2;
 }
 
 h1 {
@@ -63,8 +62,6 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* padding-right: .5em;
-  padding-left: .5em; */
   font-size: 20px;
   margin: 1em;
   border: none;
@@ -97,44 +94,44 @@ form {
 
 label {
   margin-left: 25%;
+  font-weight: 500;
+  padding: 5em 0 5em 0;
+}
+
+input {
+  width: 100%;
+}
+
+.title-box, .body-box, .save-btn, .search-ideas-bar {
+  border: 1px solid #5356A4;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: .25em;
+  padding: 1px 2px
 }
 
 .title-box {
-  display: flex;
-  width: 50%;
-  height: 40%;
-  margin-left: 25%;
-  margin-right: 25%;
-  border: 1px solid #5356A4;
-  /* how do we apply this border to all elements
-  in form */
-
+  height: 2em;
 }
 
 .body-box {
-  width: 50%;
-  height: 100%;
-  margin-left: 25%;
-  border: 1px solid #5356A4;
+  height: 5em;
 }
 
 .save-btn {
   background: #1F1F3D;
   color: #EAEAF4;
-  border-radius: .25em;
-  font-size: 1em;
-  height: 35px;
-  border: 1px solid #5356A4;
-  width: 50%;
-  margin-left: 25%;
-
+  font-size: 1.25em;
+  font-weight: bold;
+  height: 2em;
 }
 
 .search-icon {
   background: #1F1F3D;
   color: #EAEAF4;
   font-size: 1em;
-  height: 2em;
+  height: auto;
+  padding: .4em 0 .4em 0;
   width: 10%;
 }
 
@@ -142,9 +139,6 @@ label {
   display: flex;
   flex-direction: row;
   height: 2.5em;
-  border: 1px solid #5356A4;
-  width: 50%;
-  margin-left: 25%;
 }
 
 /* Bottom-container */
@@ -154,8 +148,6 @@ section {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* height: 40%;
-  width: 100% */
 }
 
 article {
@@ -169,9 +161,7 @@ article {
   background-color: #1F1F3D;
   display:flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
-  /* align-items: stretch; */
   height: 2em;
 }
 
@@ -195,17 +185,19 @@ article {
 
 .card-holder {
   display: grid;
-  grid-template-rows: repeat(3, 33%);
-  grid-template-columns: repeat(3, 33%);
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(3, 33.33%);
   height: 100%;
 }
 
 .card {
   background: white;
   min-width: 250px;
-  width: 30%;
   margin: auto;
   overflow: scroll;
+  border: 1px solid #1F1F3D;
 }
 
 .idea-text-container {
@@ -213,12 +205,13 @@ article {
 }
 
 h3 {
-  margin: 10px;
+  margin: 1em;
 }
 
 p {
   font-weight: 400;
-  margin: 15px;
+  margin: 1em;
+  height: 8em;
   }
 
 .hidden {
