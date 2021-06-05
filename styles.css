@@ -6,7 +6,7 @@
 
 * {
   font-family: 'Open Sans', sans-serif;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 body, html {
@@ -65,6 +65,7 @@ h2 {
 }
 
 /* Right-container: with top and bottom */
+
 main {
   display: flex;
   flex-direction: column;
@@ -75,6 +76,7 @@ main {
 }
 
 /*  Top-container */
+
 form {
   background-color: #A9AAD2;
   font-weight: lighter;
@@ -135,7 +137,7 @@ label {
   flex-direction: row;
   height: 2em;
   border: 1px solid #5356A4;
-  width: 50%;
+  width: 60%;
   margin-left: 25%;
 }
 
@@ -170,6 +172,35 @@ article {
   /* align-items: stretch; */
   height: 2em;
 }
+
+.delete-card, .empty-star, .save-star, .comment{
+  width: 10%;
+}
+
+.cross-icon-comment {
+  display:flex;
+  flex-direction: row;
+  background-color: #5356A4;
+  width: 100%;
+}
+
+.comment {
+  background-color: #5356A4;
+  color: white;
+  font-weight: bold;
+}
+
+.card-holder {
+
+}
+
+.card {
+  min-width: 250px;
+  width: 30%;
+}
+
+
+
 
 /* h3, p, button {
   display: flex;
