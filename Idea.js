@@ -18,4 +18,8 @@ deleteFromStorage() {
   }
 // iterate over ids and delete specific id of idea we want to delete
 
+updateIdea() {
+  
+  //should be able to update the idea’s title, body, or starred state
+  }
 }
