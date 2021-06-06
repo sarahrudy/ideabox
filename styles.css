@@ -1,8 +1,3 @@
-/* Background color 1(Dark Purple): #1F1F3D
-   Background color 2(Medium Purple): #A9AAD2
-   Background color 3(Light Pruple): #EAEAF4
-   Header Text: Open Sans, Bold
-   Body and Label Text: Open Sans, Light */
 
 * {
   font-family: 'Open Sans', sans-serif;
@@ -33,14 +28,15 @@ aside {
   flex-wrap: wrap-reverse;
 }
 
-.aside-header, .aside-body {
-  width: 100%;
-}
+/* code for faint purple line separation */
+/* .aside-header, .aside-body {
+  /* width: 100%; */
+/* } */
 
-.aside-body {
+/* .aside-body {
   border-top: 1px solid #A9AAD2;
   border-bottom: 1px solid #A9AAD2;
-}
+} */
 
 h1 {
   color: #E9E9F3;
@@ -55,20 +51,18 @@ h2 {
 }
 
 .show-starred-btn {
-  background-color: #5356A4;
-  color: #E9E9F3;
-  font-weight: bold;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* padding-right: .5em;
-  padding-left: .5em; */
-  font-size: 20px;
-  margin: 1em;
-  border: none;
-
+  background-color: #5356A4;
+  color: #E9E9F3;
+  font-weight: bold;
+  width: 100%;
+  height: 2em;
+  font-size: 15px;
+  margin: 10%;
+  border: 1px;
 }
 
 /* Right-container: with top and bottom */
@@ -79,7 +73,6 @@ main {
   justify-content: flex-start;
   width: 75%;
   height: 100%;
-  /* font-weight: Light; */
 }
 
 /*  Top-container */
@@ -99,21 +92,22 @@ label {
   margin-left: 25%;
 }
 
+input {
+  width: 100%;
+}
+
 .title-box {
   display: flex;
   width: 50%;
-  height: 40%;
+  height: 2em;
   margin-left: 25%;
   margin-right: 25%;
   border: 1px solid #5356A4;
-  /* how do we apply this border to all elements
-  in form */
-
 }
 
 .body-box {
   width: 50%;
-  height: 100%;
+  height: 5em;
   margin-left: 25%;
   border: 1px solid #5356A4;
 }
@@ -122,20 +116,22 @@ label {
   background: #1F1F3D;
   color: #EAEAF4;
   border-radius: .25em;
-  font-size: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
   height: 35px;
   border: 1px solid #5356A4;
   width: 50%;
   margin-left: 25%;
-
 }
 
 .search-icon {
   background: #1F1F3D;
   color: #EAEAF4;
+  border-radius: .25em;
   font-size: 1em;
-  height: 2em;
-  width: 10%;
+  padding: .5em 0 .5em 0;
+  height: auto;
+  width: 35px;
 }
 
 .search-ideas-bar {
@@ -148,14 +144,13 @@ label {
 }
 
 /* Bottom-container */
+
 section {
   background-color: #EAEAF4;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  /* height: 40%;
-  width: 100% */
+}
+
+input {
+  width: 100%;
 }
 
 article {
@@ -163,9 +158,9 @@ article {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap-reverse;
-
 }
-.star-delete {
+
+.star-delete-bar {
   background-color: #1F1F3D;
   display:flex;
   flex-direction: row;
@@ -175,7 +170,7 @@ article {
   height: 2em;
 }
 
-.delete-card, .empty-star, .save-star, img{
+.delete-card, .empty-star, .save-star, img {
   width: 10%;
 }
 
@@ -188,24 +183,25 @@ article {
   color: white;
   font-weight: bold;
   border: none;
-  padding: 0;
-  height: 2.5em;
-
+  height: 2em;
 }
 
 .card-holder {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-rows: repeat(3, 33%);
   grid-template-columns: repeat(3, 33%);
   height: 100%;
+  grid-gap: 5px;
 }
 
 .card {
   background: white;
-  min-width: 250px;
+  min-width: 90%;
   width: 30%;
   margin: auto;
-  overflow: scroll;
+  border: 1px solid #5356A4;
 }
 
 .idea-text-container {
