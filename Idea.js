@@ -1,25 +1,21 @@
 class Idea {
-  constructor(title, body, star, id){
+  constructor(title, body, star) {
     this.title = title;
     this.body = body;
     this.star = false;
-    this.id = id;
+    this.id = Date.now();
   }
 
-function saveToStorage() {
-  var idea = {
-    title: this.title,
-    body: this.body,
-    star: this.star,
-    id: this.id
+saveToStorage() {
+  localStorage.setItem("savedIdea", JSON.stringify(this))
+  // this is the entire object of Idea
+  // JSON.stringify(this) is the var stringifiedIdea
+  // might also need to stringify this.id
   }
-  var stringIdea = JSON.stringify(idea)
-  localStorage.setItem(`savedIdea${this.id}`, stringIdea)
-}
 
-function deleteFromStorage() {
+deleteFromStorage() {
   localStorage.removeItem(`savedIdea${this.id}`)
-}
+  }
+// iterate over ids and delete specific id of idea we want to delete
 
-}
 }
