@@ -166,6 +166,7 @@ article {
   flex-direction: row;
   /* flex-wrap: wrap; */
   justify-content: space-between;
+  /* align-items: stretch; */
   height: 2em;
 }
 
