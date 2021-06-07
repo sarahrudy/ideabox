@@ -2,18 +2,17 @@
 var ideas = [];
 
 // Query Selectors will go here
-
-// when a user clicks save and there is information in both the title and body input fields
-// then a new idea card with the provided title and body will appear on the idea list
 // window.onLoad = ;
 var titleInput = document.querySelector('.title-box');
 var bodyInput = document.querySelector('.body-box');
 var saveBtn = document.querySelector('.save-btn');
 var ideaCard = document.querySelector('.card')
+var inputArea = document.querySelector('.input-area')
 // will we need to use IDs here instead of class?
 
 // Event Listeners will go here
-// window.addEventListener('load', disableSaveBtn)
+window.addEventListener('load', disableSaveBtn)
+inputArea.addEventListener('input', enableSaveBtn)
 saveBtn.addEventListener('click', function () {
   addNewIdea(event);
   renderCard()
@@ -25,33 +24,33 @@ function addNewIdea(event) {
   event.preventDefault();
   var newIdea = new Idea(titleInput.value, bodyInput.value);
   clearInput()
-
+  disableSaveBtn()
+  // refactor this
   ideas.push(newIdea)
   if(titleInput.value && bodyInput.value) {
-
   }
 }
 
 // Add disable function to saveBtn
 // when we hover over the saveBtn AND (&&) EITHER (||) "title" or "input" fields are empty, the "Save" button should be disabled (lighter color and not a pointer when we hover over it)
 
-// function disableSaveBtn() {
-//   if (titleInput.value = "" || bodyInput.value = "") {
-//     saveBtn.disabled = true
-//   } else {
-//     (titleInput.value && bodyInput.value)
-//     saveBtn.disabled = false
-//   }
-// }
+function enableSaveBtn () {
+  saveBtn.classList.remove('disable-save-btn')
 
-// function disableSaveBtn() {
-//   if (titleInput.value && bodyInput.value) {
-//     saveBtn.disabled = false
-//   } else {
-//     (!titleInput.value || !bodyInput.value)
-//     saveBtn.disabled = true
-//   }
-// }
+  if (titleInput.value && bodyInput.value) {
+    saveBtn.disabled = false
+  }
+  if (!titleInput.value || !bodyInput.value) {
+    saveBtn.disabled = true
+  }
+}
+
+function disableSaveBtn() {
+  saveBtn.classList.add('disable-save-btn')
+  saveBtn.disabled = true
+}
+
+
 function clearInput() {
   titleInput.value = "";
   bodyInput.value = "";
@@ -78,10 +77,9 @@ function renderCard() {
           </button>
         </article>`
   }
-
-
-
 }
+
+
 
 // refactor:
 // addNewIdea function to be cleaner
