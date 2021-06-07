@@ -5,43 +5,60 @@ var ideas = [];
 
 // when a user clicks save and there is information in both the title and body input fields
 // then a new idea card with the provided title and body will appear on the idea list
-// window.onLoad = newIdea;
+// window.onLoad = ;
 var titleInput = document.querySelector('.title-box');
 var bodyInput = document.querySelector('.body-box');
 var saveBtn = document.querySelector('.save-btn');
 var ideaCard = document.querySelector('.card')
-console.log(ideaCard);
 // will we need to use IDs here instead of class?
 
-
-
 // Event Listeners will go here
+// window.addEventListener('load', disableSaveBtn)
 saveBtn.addEventListener('click', function () {
   addNewIdea(event);
   renderCard()
-
-
 })
-
-
+// saveBtn.addEventListener('keyup', addNewIdea)
 
 // Function and Event Handlers will go here
-// if title and body fields have input provided then a new idea card with the information will
-// appear in the ideas array
 function addNewIdea(event) {
   event.preventDefault();
   var newIdea = new Idea(titleInput.value, bodyInput.value);
-  titleInput.value = "";
-  bodyInput.value = "";
+  clearInput()
 
-  ideas.push(newIdea);
+  ideas.push(newIdea)
   if(titleInput.value && bodyInput.value) {
 
   }
 }
 
+// Add disable function to saveBtn
+// when we hover over the saveBtn AND (&&) EITHER (||) "title" or "input" fields are empty, the "Save" button should be disabled (lighter color and not a pointer when we hover over it)
+
+// function disableSaveBtn() {
+//   if (titleInput.value = "" || bodyInput.value = "") {
+//     saveBtn.disabled = true
+//   } else {
+//     (titleInput.value && bodyInput.value)
+//     saveBtn.disabled = false
+//   }
+// }
+
+// function disableSaveBtn() {
+//   if (titleInput.value && bodyInput.value) {
+//     saveBtn.disabled = false
+//   } else {
+//     (!titleInput.value || !bodyInput.value)
+//     saveBtn.disabled = true
+//   }
+// }
+function clearInput() {
+  titleInput.value = "";
+  bodyInput.value = "";
+}
+
 function renderCard() {
-  ideaCard.innerHTML = "";
+  ideaCard.innerHTML = ""
 
   for (var i = 0; i < ideas.length; i++) {
     if (!ideas[i].includes)
@@ -65,3 +82,6 @@ function renderCard() {
 
 
 }
+
+// refactor:
+// addNewIdea function to be cleaner
