@@ -19,21 +19,23 @@
         <div class="horizontal-rule"></div>
     </aside>
     <main>
-      <form>
+      <!-- TOP -->
+      <form class="input-area">
         <div>
           <label>Title</label><br />
           <input type="text" class="title-box">
         </div>
         <div>
           <label>Body</label><br />
-          <input type="text" class="body-box">
+          <textarea type="text" class="body-box"></textarea>
         </div>
-          <button class="save-btn">Save</button>
+          <button class="save-btn disable-save-btn" disabled>Save</button>
         <div class="search-ideas-bar">
           <input type="image" src="assets/search.svg" class="search-icon" id="searchIconId" alt=""/>
           <input type="text" placeholder="Search ideas">
         </div>
       </form>
+      <!-- BOTTOM -->
       <section class="card-holder">
         <article class="card">
           <div class="star-delete-bar">
