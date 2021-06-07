@@ -1,3 +1,11 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 * {
   font-family: 'Open Sans', sans-serif;
   /* border: 2px solid red; */
@@ -7,64 +15,54 @@ body, html {
   background-color: #EAEAF4;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   font-weight: bold;
   height: 100%;
   width: 100%;
-  margin: 0;
   overflow: hidden;
 }
 
-/* Left-container */
+/* LEFT BOX */
 
 aside {
   background-color: #1F1F3D;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
   width: 25%;
-  flex-wrap: wrap-reverse;
 }
-
-/* code for faint purple line separation */
-/* .aside-header, .aside-body {
-  /* width: 100%; */
-/* } */
-
-/* .aside-body {
-  border-top: 1px solid #A9AAD2;
-  border-bottom: 1px solid #A9AAD2;
-} */
 
 h1 {
   color: #E9E9F3;
-  font-size: 20px;
-  padding-left: 0.75em;
+  font-size: 1em;
+  padding: 1.5em;
 }
 
 h2 {
   color: #BFBFDD;
-  font-size: 15px;
-  padding-left: 0.75em;
+  font-size: .85em;
+  padding: 2em;
+}
+
+.horizontal-rule {
+  border-top: 1px solid #5356A4;
+}
+
+.show-starred-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 10% 10% 10%;
 }
 
 .show-starred-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: #5356A4;
   color: #E9E9F3;
   font-weight: bold;
+  font-size: 1em;
   width: 100%;
-  height: 2em;
-  font-size: 15px;
-  margin: 10%;
+  height: 2.5em;
   border: 1px;
 }
 
-/* Right-container: with top and bottom */
+/* RIGHT SIDE OF PAGE */
 
 main {
   display: flex;
@@ -74,11 +72,10 @@ main {
   height: 100%;
 }
 
-/*  Top-container */
+/* TOP BOX */
 
 form {
   background-color: #A9AAD2;
-  font-weight: lighter;
   font-size: .75em;
   display: flex;
   flex-direction: column;
@@ -114,7 +111,6 @@ input {
 .save-btn {
   background: #1F1F3D;
   color: #EAEAF4;
-  border-radius: .25em;
   font-size: 1.5em;
   font-weight: bold;
   height: 35px;
@@ -140,9 +136,10 @@ input {
   border: 1px solid #5356A4;
   width: 50%;
   margin-left: 25%;
+  margin-bottom: 1.5%;
 }
 
-/* Bottom-container */
+/* BOTTOM BOX */
 
 section {
   background-color: #EAEAF4;
@@ -163,9 +160,7 @@ article {
   background-color: #1F1F3D;
   display:flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
-  /* align-items: stretch; */
   height: 2em;
 }
 
@@ -209,13 +204,18 @@ article {
 
 h3 {
   margin: 10px;
+  font-size: 1em;
+  font-weight: 100;
 }
 
 p {
   font-weight: 400;
-  margin: 15px;
+  margin: 10px;
   }
 
 .hidden {
   display: none!important
 }
+
+/* refactor (when time allows):
+- make all icons under same rule */
