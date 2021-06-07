@@ -108,6 +108,10 @@ input {
   border: 1px solid #5356A4;
 }
 
+.save-btn:hover {
+  background: darkslateblue;
+}
+
 .save-btn {
   background: #1F1F3D;
   color: #EAEAF4;
