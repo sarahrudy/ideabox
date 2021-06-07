@@ -20,6 +20,7 @@ saveBtn.addEventListener('click', function () {
   addNewIdea(event);
   renderCard()
 
+
 })
 
 
@@ -35,11 +36,9 @@ function addNewIdea(event) {
 
   ideas.push(newIdea);
   if(titleInput.value && bodyInput.value) {
-    console.log(titleInput.value);
+
   }
 }
-
-// add helper function to render card to appear in idea list
 
 function renderCard() {
   ideaCard.innerHTML = "";
@@ -62,5 +61,7 @@ function renderCard() {
           </button>
         </article>`
   }
+
+
 
 }
