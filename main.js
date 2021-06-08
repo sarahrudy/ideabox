@@ -6,16 +6,15 @@ var ideas = [];
 var titleInput = document.querySelector('.title-box');
 var bodyInput = document.querySelector('.body-box');
 var saveBtn = document.querySelector('.save-btn');
-var ideaCard = document.querySelector('.card')
+var ideaCard = document.querySelector('.card-grid')
 var inputArea = document.querySelector('.input-area')
 // will we need to use IDs here instead of class?
 
 // Event Listeners will go here
 window.addEventListener('load', disableSaveBtn)
-inputArea.addEventListener('input', enableSaveBtn)
-saveBtn.addEventListener('click', function () {
+inputArea.addEventListener('keypress', enableSaveBtn)
+saveBtn.addEventListener('click', function() {
   addNewIdea(event);
-  renderCard()
 })
 // saveBtn.addEventListener('keyup', addNewIdea)
 
@@ -23,33 +22,29 @@ saveBtn.addEventListener('click', function () {
 function addNewIdea(event) {
   event.preventDefault();
   var newIdea = new Idea(titleInput.value, bodyInput.value);
-  clearInput()
-  disableSaveBtn()
-  // refactor this
   ideas.push(newIdea)
-  if(titleInput.value && bodyInput.value) {
-  }
+  renderCard();
+  clearInput();
+  disableSaveBtn();
 }
 
 // Add disable function to saveBtn
-// when we hover over the saveBtn AND (&&) EITHER (||) "title" or "input" fields are empty, the "Save" button should be disabled (lighter color and not a pointer when we hover over it)
+// when we hover over the saveBtn AND (&&) EITHER (||) "title" or "input" fields are empty, the saveBtn should be disabled (lighter color and not a pointer when we hover over it)
 
 function enableSaveBtn () {
-  saveBtn.classList.remove('disable-save-btn')
-
   if (titleInput.value && bodyInput.value) {
-    saveBtn.disabled = false
+    saveBtn.disabled = false;
+    saveBtn.classList.remove('disable-save-btn');
   }
   if (!titleInput.value || !bodyInput.value) {
-    saveBtn.disabled = true
+    saveBtn.disabled = true;
   }
 }
 
 function disableSaveBtn() {
-  saveBtn.classList.add('disable-save-btn')
   saveBtn.disabled = true
+  saveBtn.classList.add('disable-save-btn')
 }
-
 
 function clearInput() {
   titleInput.value = "";
@@ -70,7 +65,7 @@ function renderCard() {
           </div>
             <div class="idea-text-container">
               <h3>${ideas[i].title}</h3>
-              <p>${ideas[i].body}</p>
+              <textarea>${ideas[i].body}</textarea>
             </div>
           <button class="cross-icon-comment">
             <img src="assets/comment.svg" alt="">Comment
