@@ -8,6 +8,8 @@ var bodyInput = document.querySelector('.body-box');
 var saveBtn = document.querySelector('.save-btn');
 var ideaCard = document.querySelector('.card-grid')
 var inputArea = document.querySelector('.input-area')
+// var deleteCardBtn = document.querySelector('.star-delete-bar')
+// var deleteCardId = document.getElementById('deleteCardId')
 // will we need to use IDs here instead of class?
 
 // Event Listeners will go here
@@ -16,6 +18,7 @@ inputArea.addEventListener('keypress', enableSaveBtn)
 saveBtn.addEventListener('click', function() {
   addNewIdea(event);
 })
+ideaCard.addEventListener('click', cardBox);
 // saveBtn.addEventListener('keyup', addNewIdea)
 
 // Function and Event Handlers will go here
@@ -74,7 +77,37 @@ function renderCard() {
   }
 }
 
+function deleteCard(event) {
+  var index = event.target.classList[1];
+  var removedCard = ideas.splice(index, 1)[0];
+  removedCard.deleteFromStorage(removedCard.id);
+}
+// function deleteCard(event) {
+//   if (event.target.classList.contains("delete-card")) {
+//     event.target.closest("card").remove();
+//   }
+// };
+
+function favoriteCard(event) {
+
+  if (event.target.classList.contains("empty-star")) {
+    event.target.classList.toggle("save-star")
+  }
+}
+
+function cardBox(event) {
+  event.preventDefault();
+  if (event.target.classList.contains("delete-card")) {
+    deleteCard(event);
+    renderCard();
+  }
+  if (event.target.classList.contains("empty-star") ||
+  event.target.classList.contains("save-star")) {
+    favoriteCard(event)
+
+  }
+}
 
 
+// If article card .contains the id, then removeItem
 // refactor:
-// addNewIdea function to be cleaner
