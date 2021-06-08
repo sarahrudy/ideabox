@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-    rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>IdeaBox</title>
   </head>
   <body>
@@ -22,12 +23,12 @@
       <!-- TOP -->
       <form class="input-area">
         <div>
-          <label>Title</label><br />
-          <input type="text" class="title-box">
+          <label>Title</label>
+          <input type="text" class="title-box" required>
         </div>
         <div>
-          <label>Body</label><br />
-          <textarea type="text" class="body-box"></textarea>
+          <label>Body</label>
+          <textarea type="text" class="body-box" required></textarea>
         </div>
           <button class="save-btn disable-save-btn" disabled>Save</button>
         <div class="search-ideas-bar">
@@ -36,8 +37,8 @@
         </div>
       </form>
       <!-- BOTTOM -->
-      <section class="card-holder">
-        <article class="card">
+      <section class="card-grid">
+        <!-- <article class="card hidden">
           <div class="star-delete-bar">
             <input type="image" src="assets/star.svg" class="empty-star" id="emptyStarId" alt=""/>
             <input type="image" src="assets/star-active.svg" class="save-star hidden" id="saveStarID" alt="" />
@@ -45,12 +46,12 @@
           </div>
             <div class="idea-text-container">
               <h3>Idea title</h3>
-              <p>Next level ut labore viral ad wayfarers photo booth unicorn.</p>
+              <textarea>Next level ut labore viral ad wayfarers photo booth unicorn.</textarea>
             </div>
           <button class="cross-icon-comment">
             <img src="assets/comment.svg" alt="">Comment
           </button>
-        </article>
+        </article> -->
       </section>
     </main>
     <script type="text/javascript" src="Idea.js" alt=""></script>
