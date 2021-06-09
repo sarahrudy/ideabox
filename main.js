@@ -1,27 +1,20 @@
-// Global variable is set as an empty array
 var ideas = [];
 
-// Query Selectors will go here
-// window.onLoad = ;
 var titleInput = document.querySelector('.title-box');
 var bodyInput = document.querySelector('.body-box');
 var saveBtn = document.querySelector('.save-btn');
 var ideaCard = document.querySelector('.card-grid')
 var inputArea = document.querySelector('.input-area')
-// var deleteCardBtn = document.querySelector('.star-delete-bar')
-// var deleteCardId = document.getElementById('deleteCardId')
-// will we need to use IDs here instead of class?
+var deleteCardBtn = document.querySelector('.star-delete-bar')
+var deleteCardId = document.getElementById('deleteCardId')
 
-// Event Listeners will go here
 window.addEventListener('load', disableSaveBtn)
 inputArea.addEventListener('keypress', enableSaveBtn)
 saveBtn.addEventListener('click', function() {
   addNewIdea(event);
 })
 ideaCard.addEventListener('click', cardBox);
-// saveBtn.addEventListener('keyup', addNewIdea)
 
-// Function and Event Handlers will go here
 function addNewIdea(event) {
   event.preventDefault();
   var newIdea = new Idea(titleInput.value, bodyInput.value);
@@ -30,9 +23,6 @@ function addNewIdea(event) {
   clearInput();
   disableSaveBtn();
 }
-
-// Add disable function to saveBtn
-// when we hover over the saveBtn AND (&&) EITHER (||) "title" or "input" fields are empty, the saveBtn should be disabled (lighter color and not a pointer when we hover over it)
 
 function enableSaveBtn () {
   if (titleInput.value && bodyInput.value) {
@@ -82,14 +72,8 @@ function deleteCard(event) {
   var removedCard = ideas.splice(index, 1)[0];
   removedCard.deleteFromStorage(removedCard.id);
 }
-// function deleteCard(event) {
-//   if (event.target.classList.contains("delete-card")) {
-//     event.target.closest("card").remove();
-//   }
-// };
 
 function favoriteCard(event) {
-
   if (event.target.classList.contains("empty-star")) {
     event.target.classList.toggle("save-star")
   }
@@ -107,7 +91,3 @@ function cardBox(event) {
 
   }
 }
-
-
-// If article card .contains the id, then removeItem
-// refactor:

@@ -8,7 +8,6 @@
 
 * {
   font-family: 'Open Sans', sans-serif;
-  /* border: 2px solid red; */
 }
 
 body, html {
@@ -74,7 +73,6 @@ main {
 }
 
 /* TOP BOX */
-
 form {
   background-color: #A9AAD2;
   font-size: .75em;
@@ -144,7 +142,6 @@ label {
 }
 
 /* BOTTOM BOX */
-
 section {
   background-color: #EAEAF4;
 }
@@ -227,7 +224,3 @@ textarea {
 .hidden {
   display: none!important
 }
-
-/* refactor (when time allows):
-- bold Idea Title
-- get ideaCard to size correctly when new idea is added */
